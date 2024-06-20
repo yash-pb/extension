@@ -14,6 +14,7 @@ function pauseYouTubeVideo() {
     }
   }
   
+  // Handle tab visibility changes
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') {
       pauseYouTubeVideo();
@@ -22,11 +23,14 @@ function pauseYouTubeVideo() {
     }
   });
   
+  // Handle window focus and blur events
   window.addEventListener('blur', () => {
     pauseYouTubeVideo();
   });
   
   window.addEventListener('focus', () => {
-    resumeYouTubeVideo();
+    if (document.visibilityState === 'visible') {
+      resumeYouTubeVideo();
+    }
   });
   

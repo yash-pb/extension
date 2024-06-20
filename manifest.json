@@ -5,7 +5,8 @@
     "description": "Automatically pauses and resumes YouTube videos when switching tabs or windows.",
     "permissions": [
       "tabs",
-      "activeTab"
+      "activeTab",
+      "scripting"
     ],
     "background": {
       "service_worker": "background.js"

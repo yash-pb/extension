@@ -1,81 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YouTube Auto Pause & Resume</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        width: 300px;
-        text-align: center;
-        background-color: #f9f9f9;
-      }
-
-      .container {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 18px;
-        color: #333;
-        margin-bottom: 10px;
-      }
-
-      p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 20px;
-      }
-
-      .buttons {
-        margin-bottom: 20px;
-      }
-
-      button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 14px;
-        cursor: pointer;
-        border-radius: 4px;
-        margin: 5px;
-      }
-
-      button:hover {
-        background-color: #0056b3;
-      }
-
-      footer {
-        font-size: 12px;
-      }
-
-      footer a {
-        color: #007bff;
-        text-decoration: none;
-        margin: 0 5px;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>YouTube Auto Pause & Resume</h1>
-      <p>
-        Automatically pauses and resumes YouTube videos when switching tabs.
-      </p>
-      <footer>
-        <a href="https://support.example.com" target="_blank">Support</a>
-        <a href="https://documentation.example.com" target="_blank"
-          >Documentation</a
-        >
-      </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Auto Pause & Resume</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Auto Pause & Resume</h1>
+    <p>Automatically pauses and resumes YouTube videos when switching tabs or windows.</p>
+    <h2>Instructions</h2>
+    <ul>
+      <li>Play a YouTube video.</li>
+      <li>Switch to another tab or window to pause the video.</li>
+      <li>Return to the YouTube tab or window to resume the video.</li>
+    </ul>
+    <div class="buttons">
+      <button id="pauseButton">Pause Video</button>
+      <button id="resumeButton">Resume Video</button>
     </div>
-  </body>
+    <!-- <footer>
+      <a href="" target="_blank">Support</a>
+      <a href="" target="_blank">Documentation</a>
+    </footer> -->
+  </div>
+  <script src="popup.js"></script>
+</body>
 </html>
