@@ -1,118 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Auto Pause & Resume</title>
-  <style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 300px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Auto Pause & Resume</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
 
-.container {
-  padding: 20px;
-}
+      .container {
+        padding: 20px;
+      }
 
-h1 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
-}
+      h1 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+      }
 
-p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
+      p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+      }
 
-.buttons {
-  margin-bottom: 20px;
-}
+      .buttons {
+        margin-bottom: 20px;
+      }
 
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 4px;
-  margin: 5px;
-}
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 5px;
+      }
 
-button:hover {
-  background-color: #0056b3;
-}
+      button:hover {
+        background-color: #0056b3;
+      }
 
-footer {
-  font-size: 12px;
-}
+      footer {
+        font-size: 12px;
+      }
 
-footer a {
-  color: #007bff;
-  text-decoration: none;
-  margin: 0 5px;
-}
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+        margin: 0 5px;
+      }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>YouTube Auto Pause & Resume</h1>
-    <p>Automatically pauses and resumes YouTube videos when switching tabs.</p>
-    <div class="buttons">
-      <button id="pauseButton">Pause Video</button>
-      <button id="resumeButton">Resume Video</button>
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>YouTube Auto Pause & Resume</h1>
+      <p>
+        Automatically pauses and resumes YouTube videos when switching tabs.
+      </p>
+      <footer>
+        <a href="https://support.example.com" target="_blank">Support</a>
+        <a href="https://documentation.example.com" target="_blank"
+          >Documentation</a
+        >
+      </footer>
     </div>
-    <footer>
-      <a href="https://support.example.com" target="_blank">Support</a>
-      <a href="https://documentation.example.com" target="_blank">Documentation</a>
-    </footer>
-  </div>
-  <script>
-    // popup.js
-
-document.getElementById('pauseButton').addEventListener('click', () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.scripting.executeScript({
-      target: { tabId: tabs[0].id },
-      function: pauseYouTubeVideo
-    });
-  });
-});
-
-document.getElementById('resumeButton').addEventListener('click', () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.scripting.executeScript({
-      target: { tabId: tabs[0].id },
-      function: resumeYouTubeVideo
-    });
-  });
-});
-
-function pauseYouTubeVideo() {
-  const video = document.querySelector('video');
-  if (video && !video.paused) {
-    video.pause();
-  }
-}
-
-function resumeYouTubeVideo() {
-  const video = document.querySelector('video');
-  if (video && video.paused) {
-    video.play();
-  }
-}
-
-  </script>
-</body>
+  </body>
 </html>

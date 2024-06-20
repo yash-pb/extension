@@ -22,3 +22,11 @@ function pauseYouTubeVideo() {
     }
   });
   
+  window.addEventListener('blur', () => {
+    pauseYouTubeVideo();
+  });
+  
+  window.addEventListener('focus', () => {
+    resumeYouTubeVideo();
+  });
+  

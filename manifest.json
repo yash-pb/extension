@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "YouTube Auto Pause & Resume",
     "version": "1.0",
-    "description": "Automatically pauses and resumes YouTube videos when switching tabs.",
+    "description": "Automatically pauses and resumes YouTube videos when switching tabs or windows.",
     "permissions": [
       "tabs",
       "activeTab"
